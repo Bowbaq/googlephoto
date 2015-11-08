@@ -33,13 +33,11 @@ func main() {
     check(err)
 
     for _, photo := range albumPhotos {
-      if _, seen := photos[photo.ID]; !seen {
-        photos[photo.ID] = photo
-      } else {
-        photos[photo.ID].Albums = append(photos[photo.ID].Albums, album.ID)
-      }
+      photos[photo.ID] = photo
     }
   }
+
+  fmt.Printf("Found %s unique photos\n", len(photos))
 }
 
 func oauth2Client() *http.Client {

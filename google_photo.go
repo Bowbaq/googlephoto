@@ -37,8 +37,7 @@ type Photo struct {
 		URL string `xml:"src,attr"`
 	} `xml:"http://www.w3.org/2005/Atom content"`
 
-	Name   string `xml:"title"`
-	Albums []string
+	Name string `xml:"title"`
 
 	Timestamp int `xml:"http://schemas.google.com/photos/2007 timestamp"`
 	Size      int `xml:"http://schemas.google.com/photos/2007 size"`
